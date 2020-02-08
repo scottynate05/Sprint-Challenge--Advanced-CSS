@@ -1,3 +1,9 @@
+.just-center {
+  justify-content: center;
+}
+.alit-center {
+  align-items: center;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -160,6 +166,46 @@ p {
   width: 100%;
   margin: 0 auto;
 }
+.top-nav nav {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  color: #22283B;
+  background: #f4f4f4;
+}
+.top-nav nav h1 {
+  font-size: 3rem;
+  padding-top: 15px;
+}
+@media only screen and (max-width: 500px) {
+  .top-nav nav h1 {
+    font-size: 4rem;
+  }
+}
+nav .links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+}
+.top-nav a {
+  padding: 0 30px 0 30px;
+  color: #22283B;
+  text-decoration: none;
+}
+.top-nav a:hover {
+  background: #22283B;
+  color: #f4f4f4;
+  border-radius: 4px;
+}
+@media only screen and (max-width: 500px) {
+  .top-nav a {
+    padding: 0 15px 0 15px;
+  }
+}
 footer {
   color: #22283B;
   background: #f4f4f4;
@@ -170,11 +216,33 @@ footer {
   justify-content: center;
   align-items: center;
 }
+@media only screen and (max-width: 500px) {
+  .home {
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+}
+.home a {
+  text-decoration: none;
+}
 .home .intro h2 {
   padding: 15px;
 }
 .home .intro p {
   padding: 0 15px;
+}
+.home .intro .img-content img {
+  border-radius: 5px;
+  max-width: 100%;
+  height: auto;
+}
+@media only screen and (max-width: 500px) {
+  .home .intro .img-content img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 .home .space-images {
   display: flex;
@@ -186,6 +254,21 @@ footer {
   margin: 20px 2.5%;
   border-radius: 20px;
   height: 100%;
+}
+@media only screen and (max-width: 500px) {
+  .home .space-images .sky {
+    display: none;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .home .space-images .launch {
+    display: none;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .home .space-images .blast {
+    width: 90%;
+  }
 }
 .home .visit-planets {
   padding: 15px;
@@ -203,14 +286,46 @@ footer {
   display: flex;
   justify-content: center;
 }
+@media only screen and (max-width: 500px) {
+  .home .walk {
+    margin: 15px;
+    padding: 15px;
+  }
+}
 .home .walk .walk-text {
   width: 50%;
+}
+@media only screen and (max-width: 500px) {
+  .home .walk .walk-text {
+    width: 100%;
+  }
 }
 .home .walk .walk-text h3 {
   margin-bottom: 10px;
 }
 .home .walk .walk-text p {
   margin-bottom: 26px;
+}
+.home .walk .walk-text .btn {
+  justify-content: center;
+  text-align: center;
+  font-size: 2rem;
+  padding: 10px;
+  border-radius: 5px;
+  width: 30%;
+  background: #22283B;
+  color: #f4f4f4;
+}
+.home .walk .walk-text .btn:hover {
+  background-color: #f4f4f4;
+  color: #22283B;
+}
+@media only screen and (max-width: 500px) {
+  .home .walk .walk-text .btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
 }
 .home .walk .walk-img {
   width: 46%;
@@ -220,4 +335,64 @@ footer {
   width: 100%;
   height: auto;
   border-radius: 10px;
+}
+@media only screen and (max-width: 500px) {
+  .home .walk .walk-img {
+    width: 95%;
+    height: auto;
+    margin-left: 0;
+    padding-bottom: 15px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .home .walk {
+    flex-flow: column-reverse nowrap;
+    margin: 0;
+    width: 100%;
+  }
+}
+.container-home {
+  font-family: 'Ubuntu', sans-serif;
+  color: #22283B;
+  font-size: 1.6rem;
+}
+.container-home input[type=text],
+.container-home select,
+.container-home textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+.container-home input[type=submit] {
+  background-color: #22283B;
+  color: #f4f4f4;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 500px) {
+  .container-home input[type=submit] {
+    width: 100%;
+  }
+}
+.container-home input[type=submit]:hover {
+  background-color: #f4f4f4;
+  color: #22283B;
+}
+.container-home .container {
+  padding: 20px;
+}
+@media only screen and (max-width: 500px) {
+  .container-home {
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
 }
